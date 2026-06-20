@@ -6,5 +6,15 @@
   "main": "dist/server/server.js",
   "build": {
     "command": "npm run build"
-  }
+  },
+  "assets": {
+    "directory": "dist/client",
+    "binding": "ASSETS"
+  },
+  "routes": [
+    {
+      "pattern": "/",
+      "custom_domain": true
+    }
+  ]
 }
