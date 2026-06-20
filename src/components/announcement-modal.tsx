@@ -13,8 +13,8 @@ export function AnnouncementModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] border border-white/10 p-8 shadow-2xl">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-2xl rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] border border-white/10 p-8 shadow-2xl my-8">
         {/* Close button */}
         <button
           onClick={() => setIsOpen(false)}
@@ -24,17 +24,12 @@ export function AnnouncementModal() {
           <X className="h-5 w-5" />
         </button>
 
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#A7D129]/40 bg-[#A7D129]/10 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-[#A7D129] mb-4">
-          <span className="h-2 w-2 rounded-full bg-[#A7D129]" />
-          New Announcement
-        </div>
 
         {/* Image */}
         <img
           src={tmgmImage}
           alt="TMGM TNAT Partnership"
-          className="mt-4 w-full rounded-xl border border-white/10 object-cover"
+          className="mt-4 w-full h-56 rounded-xl border border-white/10 object-cover"
         />
 
         {/* Content */}
@@ -81,11 +76,6 @@ export function AnnouncementModal() {
             Dismiss
           </button>
         </div>
-
-        {/* Footer text */}
-        <p className="mt-4 text-xs text-white/50 text-center">
-          Exclusive benefits available for TNAT community members
-        </p>
       </div>
     </div>
   );
