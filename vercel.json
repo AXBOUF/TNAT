@@ -5,12 +5,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api/handler"
+      "destination": "/api/handler.js"
     }
-  ],
-  "functions": {
-    "api/handler.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  ]
 }
