@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-anonymous.jpg";
 import mentee1 from "@/assets/mentee-1.jpg";
 import mentee2 from "@/assets/mentee-2.jpg";
-import liveSession from "@/assets/live-session.jpg";
 import announcementBanner from "@/assets/ANNOUNCEMENTBANNER.png";
+import liveSessionImage from "@/assets/livesessions.jpg";
 import achievement1 from "@/assets/achievement1.png";
 import achievement2 from "@/assets/achievement2.png";
 import achievement3 from "@/assets/achievement3.png";
@@ -275,7 +275,7 @@ function LiveSession() {
     <section className="py-24 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative rounded-2xl overflow-hidden border border-border">
-          <img src={liveSession} alt="Daily live trading session" loading="lazy" width={1280} height={800} className="w-full h-auto" />
+          <img src={liveSessionImage} alt="Daily live trading session" loading="lazy" width={1280} height={800} className="w-full h-auto" />
           <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur px-3 py-1.5 text-xs font-bold text-[#FF2D2D]">
             <span className="h-2 w-2 rounded-full bg-[#FF2D2D] animate-pulse" />
             LIVE
