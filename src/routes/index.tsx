@@ -3,7 +3,17 @@ import heroImg from "@/assets/hero-anonymous.jpg";
 import mentee1 from "@/assets/mentee-1.jpg";
 import mentee2 from "@/assets/mentee-2.jpg";
 import liveSession from "@/assets/live-session.jpg";
-import { ArrowRight, Check, Circle, Instagram, Youtube, Twitter, MessageCircle, Heart, CheckCircle2, Flame, Megaphone, Mail, Play, Gift, Sparkles, Trophy } from "lucide-react";
+import announcementBanner from "@/assets/ANNOUNCEMENTBANNER.png";
+import achievement1 from "@/assets/achievement1.png";
+import achievement2 from "@/assets/achievement2.png";
+import achievement3 from "@/assets/achievement3.png";
+import achievement4 from "@/assets/achievement4.png";
+import achievement5 from "@/assets/achievement5.jpg";
+import achievement6 from "@/assets/achievement6.jpg";
+import achievement7 from "@/assets/achievement7.png";
+import achievement8 from "@/assets/achievement8.png";
+import achievement9 from "@/assets/achievement9.png";
+import { ArrowRight, Check, Circle, Heart, CheckCircle2, Flame, Megaphone, Mail, Gift, Sparkles, Trophy, Zap } from "lucide-react";
 import { VIDEO_ITEMS } from "@/lib/videos";
 import { useHeaderScroll } from "@/hooks/use-header-scroll";
 import { AnnouncementModal } from "@/components/announcement-modal";
@@ -33,7 +43,6 @@ const NAV: { label: string; href: string; to?: string }[] = [
   { label: "Results", href: "/#results", to: "/" },
   { label: "Videos", href: "/#videos", to: "/" },
   { label: "Announcements", href: "/#announcements", to: "/" },
-  { label: "Achievements", href: "/achievements", to: "/achievements" },
 ];
 
 
@@ -73,39 +82,16 @@ const PLANS = [
   },
 ];
 
-const REVIEWS = [
-  {
-    name: "Sudip",
-    when: "05/07/2025, 02:43",
-    span: "md:col-span-2",
-    quote:
-      "It was a wonderful reflection session today where we all shared our history of trading and thank you for our mentor @Anonymous Trader, for continuous support — we successfully completed our first 6 months together and we'll go on stronger. For me, this is the longest I've stayed with one team in a month. Why? Because I feel this is the place I was looking for, and it took me years to find. Thank you @Anonymous Trader and TNAT for building this empire — this journey has been amazing and will continue.",
-    reactions: [{ I: Heart, n: 7 }, { I: CheckCircle2, n: 3 }, { I: Flame, n: 5 }, { I: Megaphone, n: 2 }],
-  },
-  {
-    name: "Niraj",
-    when: "Today at 22:30",
-    span: "md:col-span-2 md:row-span-2",
-    quote:
-      "Testimonial for my trading mentors — from confused beginner to (almost) disciplined trader. I was a total beginner when I started trading: zero knowledge, zero experience, just pure curiosity. I joined this group to learn from scratch, and at first I found it both fun and scary. Fun because, well, trading sounded exciting. Scary because my brain refused to process all the charts and candlesticks.\n\nWhen I first started trading, let's just say 'discipline' was not in my vocabulary. I was like a kid in a candy store — except instead of candy, it was trades, and instead of enjoying them, I was losing a lot of my precious (paper) money. Fake out? BOOM, enter! LYAMMAI CANDLE BOOM, enter again! And let's not forget my favourite mistake — revenge trading! Lose a trade? BOOM, enter again to get it back! Spoiler alert: that never worked. Instead, my losses kept piling up, and my frustration levels skyrocketed.\n\nBut thanks to my amazing mentor and the team, I started to actually learn instead of just YOLO-ing my trades. They taught me the importance of patience, key levels, and not throwing myself into the market without a plan. The best part? Learning was never boring — every class was fun, full of jokes, and explained in the simplest way possible. No overcomplicated nonsense, just real, practical knowledge.",
-    reactions: [{ I: Heart, n: 11 }, { I: CheckCircle2, n: 9 }, { I: Flame, n: 9 }],
-  },
-  {
-    name: "Gaurab",
-    when: "05/07/2025, 01:29",
-    span: "md:col-span-2",
-    quote:
-      "Before joining this group I was honestly lost. I had no idea when to move from demo to real trading, which strategy suited me, or how to build my own edge in the market. I felt stuck and confused. But after joining this group — undoubtedly the best trading community in Nepal — everything changed. I learned a simple, proven strategy that actually works, and I'm now building my edge with a clear and realistic goal in this field.\n\nI've gained true understanding of risk management, emotional control, discipline, and consistency. But more than all of that, this group feels like a family. We laugh over losses, support each other through everything, and grow together every day. ❤️",
-    reactions: [{ I: Heart, n: 7 }, { I: CheckCircle2, n: 3 }, { I: Flame, n: 5 }],
-  },
-  {
-    name: "Sanju baba",
-    when: "05/07/2025, 23:56",
-    span: "md:col-span-2",
-    quote:
-      "Our first psychology session in 6 months with The Nepalese Anonymous Trader (TNAT) and it was absolutely worth the wait. In just one session, he gave us insights that were deep, real, and incredibly powerful.\n\nHis words hit the core not just about trading, but about how we think, act, and respond to life. It reminded me that mastering the mind is more important than mastering the market. This wasn't just about gold or charts — it was about mindset, patience, and self-discipline. Truly grateful to be learning from someone who doesn't just speak from theory, but from lived experience.",
-    reactions: [{ I: Heart, n: 6 }, { I: CheckCircle2, n: 2 }, { I: Flame, n: 4 }],
-  },
+const ACHIEVEMENTS = [
+  { id: 1, src: achievement1, alt: "Trading Achievement Certificate 1" },
+  { id: 2, src: achievement2, alt: "Trading Achievement Certificate 2" },
+  { id: 3, src: achievement3, alt: "Trading Achievement Certificate 3" },
+  { id: 4, src: achievement4, alt: "Trading Achievement Certificate 4" },
+  { id: 5, src: achievement5, alt: "Trading Achievement Certificate 5" },
+  { id: 6, src: achievement6, alt: "Trading Achievement Certificate 6" },
+  { id: 7, src: achievement7, alt: "Trading Achievement Certificate 7" },
+  { id: 8, src: achievement8, alt: "Trading Achievement Certificate 8" },
+  { id: 9, src: achievement9, alt: "Trading Achievement Certificate 9" },
 ];
 
 const KPIS: [string, string][] = [
@@ -299,11 +285,11 @@ function LiveSession() {
             craft from inside the room.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#plans" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-highlight transition-colors">
-              Join Community (Monthly)
+            <a href="https://whop.com/checkout/plan_znpUyLrsLQmBl" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-highlight transition-colors">
+              JOIN COMMUNITY 6 MONTH
             </a>
-            <a href="#plans" className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold hover:bg-secondary transition-colors">
-              Join 6-Month Mentorship
+            <a href="https://whop.com/checkout/plan_0LHdF875VXuoa" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold hover:bg-secondary transition-colors">
+              JOIN COMMUNITY LIFETIME
             </a>
           </div>
           <p className="mt-4 text-xs text-muted-foreground italic">
@@ -316,18 +302,32 @@ function LiveSession() {
 }
 
 function Results() {
-  // Duplicate the list so the translate -50% loop is seamless
-  const loop = [...REVIEWS, ...REVIEWS];
+  const loop = [...ACHIEVEMENTS, ...ACHIEVEMENTS];
   return (
     <section id="results" className="py-24 border-t border-border bg-surface-2/30 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-[0.06] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 mb-12">
+        <div className="text-center">
+          <p className="text-xs tracking-[0.3em] uppercase text-primary inline-flex items-center gap-2">
+            <Trophy className="h-3.5 w-3.5" /> Real Results
+          </p>
+          <h2 className="mt-5 text-4xl md:text-5xl font-bold leading-tight">
+            Mentee <span className="text-[#FF2D2D]">Achievements</span> & Certificates
+          </h2>
+          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
+            Real certificates and achievement badges from our mentees. These aren't testimonials — they're proof of progress.
+          </p>
+        </div>
+      </div>
+
       <style>{`
         @keyframes tnat-marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
         .tnat-marquee-track {
-          animation: tnat-marquee 80s linear infinite;
+          animation: tnat-marquee 60s linear infinite;
           width: max-content;
         }
         .tnat-marquee-mask {
@@ -335,24 +335,19 @@ function Results() {
           -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
         }
       `}</style>
+
       <div className="relative tnat-marquee-mask">
         <div className="tnat-marquee-track flex gap-5 px-6">
-          {loop.map((r, idx) => (
+          {loop.map((achievement) => (
             <article
-              key={`${r.name}-${idx}`}
-              className="relative rounded-2xl glass p-6 flex flex-col w-[360px] md:w-[420px] shrink-0"
+              key={`${achievement.id}-${Math.random()}`}
+              className="relative rounded-2xl glass p-4 flex flex-col items-center justify-center w-auto md:w-auto shrink-0 border border-border bg-card/60 hover:border-[#FF2D2D]/60 transition-all hover:shadow-2xl"
             >
-              <header className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-surface flex items-center justify-center ring-1 ring-primary/30">
-                  <div className="h-6 w-6 rounded-full bg-primary/20" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold text-primary">{r.name}</div>
-                </div>
-              </header>
-              <blockquote className="mt-4 text-sm text-foreground/90 leading-relaxed whitespace-pre-line line-clamp-[10]">
-                {r.quote}
-              </blockquote>
+              <img
+                src={achievement.src}
+                alt={achievement.alt}
+                className="max-w-xs md:max-w-sm max-h-96 object-contain"
+              />
             </article>
           ))}
         </div>
@@ -432,44 +427,34 @@ function Videos() {
 function Announcements() {
   return (
     <section id="announcements" className="py-24 border-t border-border relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-primary/20 blur-[140px] animate-pulse" />
-        <div className="absolute -bottom-32 -right-32 h-[520px] w-[520px] rounded-full bg-highlight/20 blur-[160px] animate-pulse" />
-      </div>
-      <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="text-center max-w-3xl mx-auto">
-          <p className="text-xs tracking-[0.3em] uppercase text-primary inline-flex items-center gap-2 justify-center">
-            <Megaphone className="h-3.5 w-3.5" /> Announcements
-          </p>
-          <h2 className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
-            The <span className="text-[#FF2D2D]">100K Giveaway</span> is Live
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            TNAT Partners with <span className="text-[#FF2D2D]">TMGM</span>
           </h2>
-          <p className="mt-6 text-muted-foreground text-lg">
-            We're giving away NPR 100,000 to one of our community members. Mockup preview — full details dropping soon.
+          <p className="mt-4 text-lg text-muted-foreground">
+            First Nepali trader to partner with a globally recognized regulated broker.
           </p>
         </div>
 
-        <div className="mt-14 relative rounded-3xl glass border border-primary/30 p-10 md:p-14 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-highlight/15" />
-          <div className="absolute inset-0 bg-grid opacity-[0.06]" />
-          <div className="relative grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-primary">
-                <Sparkles className="h-3 w-3" /> Mockup
-              </div>
-              <h3 className="mt-5 text-5xl md:text-7xl font-display font-bold tracking-tight">
-                NPR <span className="text-[#FF2D2D]">100,000</span>
-              </h3>
-              <p className="mt-3 text-xl text-muted-foreground">Giveaway for the TNAT Brotherhood</p>
-              <p className="mt-4 text-sm text-muted-foreground">Full details dropping soon.</p>
-            </div>
-            <div className="relative flex items-center justify-center">
-              <div className="absolute h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
-              <div className="relative h-56 w-56 md:h-72 md:w-72 rounded-full border border-primary/40 bg-background/40 backdrop-blur flex items-center justify-center">
-                <Gift className="h-24 w-24 md:h-32 md:w-32 text-primary" />
-              </div>
-            </div>
-          </div>
+        <div className="relative rounded-2xl overflow-hidden mb-8">
+          <img
+            src={announcementBanner}
+            alt="TNAT TMGM Partnership Announcement"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="text-center">
+          <a
+            href="https://portal.tmgm.com/register?r_code=IB2230058492F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#A7D129] text-black px-8 py-3 font-semibold hover:bg-[#c0e84a] transition-colors"
+          >
+            Register <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>
@@ -519,36 +504,36 @@ function Transparency() {
 
 function Footer() {
   const socials = [
-    { Icon: Instagram, label: "Instagram", href: "#" },
-    { Icon: MessageCircle, label: "Discord", href: "#" },
-    { Icon: Youtube, label: "YouTube", href: "#" },
-    { Icon: Twitter, label: "X / Twitter", href: "#" },
+    { label: "TikTok", href: "https://www.tiktok.com/@anonymoustrader_nep" },
+    { label: "YouTube", href: "https://www.youtube.com/@AnonymousTrader_Nepali" },
+    { label: "Instagram", href: "https://www.instagram.com/anonymous_trader9999/" },
   ];
 
   return (
-    <footer id="contact" className="mt-12 bg-black text-white">
+    <footer id="contact" className="mt-12 bg-white text-black">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
         <div className="grid md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10 md:gap-8">
           <div>
-            <h3 className="text-2xl font-bold">The Nepali Anonymous Traders</h3>
-            <p className="mt-4 text-sm text-white/70 leading-relaxed">
+            <h3 className="text-2xl font-bold text-black">The Nepali Anonymous Traders</h3>
+            <p className="mt-4 text-sm text-black/70 leading-relaxed">
               A serious mentorship community for Nepali traders. Daily live sessions, structured guidance, and real results.
             </p>
-            <div className="mt-6 flex items-center gap-3">
-              {socials.map(({ Icon, label, href }) => (
+            <div className="mt-6 flex items-center gap-4">
+              {socials.map(({ label, href }) => (
                 <a
                   key={label}
                   href={href}
-                  aria-label={label}
-                  className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-black hover:text-black/70 transition-colors"
                 >
-                  <Icon className="h-4 w-4" />
+                  {label}
                 </a>
               ))}
             </div>
-            <div className="mt-5 flex items-center gap-2 text-sm text-white/70">
+            <div className="mt-5 flex items-center gap-2 text-sm text-black/70">
               <Mail className="h-4 w-4 shrink-0" />
-              <span>contact@tnat.com</span>
+              <span>thenepalitraders@gmail.com</span>
             </div>
           </div>
 
@@ -566,23 +551,21 @@ function Footer() {
             links={[
               { label: "Videos", href: "/#videos" },
               { label: "Announcements", href: "/#announcements" },
-              { label: "Achievements", to: "/achievements" },
               { label: "Transparency", href: "/#results" },
             ]}
           />
           <FooterCol
             title="Connect"
             links={[
-              { label: "Instagram", href: "#" },
-              { label: "Discord", href: "#" },
-              { label: "YouTube", href: "#" },
-              { label: "X / Twitter", href: "#" },
+              { label: "Instagram", href: "https://www.instagram.com/anonymous_trader9999/" },
+              { label: "YouTube", href: "https://www.youtube.com/@AnonymousTrader_Nepali" },
+              { label: "TikTok", href: "https://www.tiktok.com/@anonymoustrader_nep" },
               { label: "Book 1-on-1 Call", href: "https://form.jotform.com/anonymoustrader9999/the-nepali-anonymous-traders" },
             ]}
           />
         </div>
 
-        <div className="mt-14 pt-6 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/60">
+        <div className="mt-14 pt-6 border-t border-black/20 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-black/60">
           <div>© {new Date().getFullYear()} The Nepali Anonymous Traders. Educational content only — not financial advice.</div>
           <div>Designed with discipline.</div>
         </div>
@@ -595,18 +578,18 @@ type FooterLink = { label: string; to?: string; href?: string };
 function FooterCol({ title, links }: { title: string; links: FooterLink[] }) {
   return (
     <div>
-      {title && <h4 className="text-sm font-semibold opacity-80">{title}</h4>}
-      <ul className="space-y-4 text-sm">
+      {title && <h4 className="text-sm font-semibold text-black">{title}</h4>}
+      <ul className="space-y-4 text-sm text-black/70">
         {links.map((l) =>
           l.to ? (
             <li key={l.label}>
-              <Link to={l.to} className="hover:underline underline-offset-4">{l.label}</Link>
+              <Link to={l.to} className="hover:underline underline-offset-4 text-black/70 hover:text-black">{l.label}</Link>
             </li>
           ) : (
             <li key={l.label}>
               <a
                 href={l.href}
-                className="hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4 text-black/70 hover:text-black"
                 target="_blank"
                 rel="noopener noreferrer"
               >

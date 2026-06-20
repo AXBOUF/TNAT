@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { X, CheckCircle2 } from "lucide-react";
 
 export function AnnouncementModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export function AnnouncementModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] border border-white/10 p-8 shadow-2xl">
         {/* Close button */}
         <button
@@ -30,26 +30,32 @@ export function AnnouncementModal() {
         </div>
 
         {/* Content */}
-        <h3 className="mt-4 text-2xl font-bold text-white">
-          New Broker Partnership
+        <h3 className="mt-4 text-xl font-bold text-white">
+          TMGM x TNAT Partnership
         </h3>
-        <p className="mt-3 text-sm text-white/70 leading-relaxed">
-          We're excited to announce our partnership with a leading broker platform. Get exclusive benefits and better trading conditions for TNAT community members.
+        <p className="mt-2 text-xs text-white/70 leading-relaxed">
+          We're proud to partner with TMGM, a globally trusted broker regulated by ASIC Australia.
         </p>
 
         {/* Features */}
-        <ul className="mt-6 space-y-2">
+        <ul className="mt-4 space-y-1.5">
           {[
-            "Lower commission rates",
-            "Priority support",
-            "Exclusive tools & signals",
+            "ASIC Regulated",
+            "Competitive Spreads",
+            "Fast Execution",
+            "Trusted by Traders Worldwide",
           ].map((feature) => (
-            <li key={feature} className="flex items-center gap-2 text-sm text-white/80">
-              <div className="h-1.5 w-1.5 rounded-full bg-[#A7D129]" />
+            <li key={feature} className="flex items-center gap-2 text-xs text-white/80">
+              <CheckCircle2 className="h-3 w-3 text-[#A7D129] shrink-0" />
               {feature}
             </li>
           ))}
         </ul>
+
+        {/* Footer note */}
+        <p className="mt-4 text-xs text-white/60 leading-relaxed border-t border-white/10 pt-3">
+          We only partner with companies we believe provide genuine value to our community. After extensive research and due diligence, we believe TMGM is a strong choice for traders seeking a regulated and reliable broker.
+        </p>
 
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-col gap-3">
@@ -70,7 +76,7 @@ export function AnnouncementModal() {
 
         {/* Footer text */}
         <p className="mt-4 text-xs text-white/50 text-center">
-          Available for all members
+          Exclusive benefits available for TNAT community members
         </p>
       </div>
     </div>

@@ -10,17 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AnnouncementsRouteImport } from './routes/announcements'
-import { Route as AchievementsRouteImport } from './routes/achievements'
 import { Route as IndexRouteImport } from './routes/index'
 
 const AnnouncementsRoute = AnnouncementsRouteImport.update({
   id: '/announcements',
   path: '/announcements',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AchievementsRoute = AchievementsRouteImport.update({
-  id: '/achievements',
-  path: '/achievements',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,31 +25,27 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/achievements': typeof AchievementsRoute
   '/announcements': typeof AnnouncementsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/achievements': typeof AchievementsRoute
   '/announcements': typeof AnnouncementsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/achievements': typeof AchievementsRoute
   '/announcements': typeof AnnouncementsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/achievements' | '/announcements'
+  fullPaths: '/' | '/announcements'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/achievements' | '/announcements'
-  id: '__root__' | '/' | '/achievements' | '/announcements'
+  to: '/' | '/announcements'
+  id: '__root__' | '/' | '/announcements'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AchievementsRoute: typeof AchievementsRoute
   AnnouncementsRoute: typeof AnnouncementsRoute
 }
 
@@ -66,13 +56,6 @@ declare module '@tanstack/react-router' {
       path: '/announcements'
       fullPath: '/announcements'
       preLoaderRoute: typeof AnnouncementsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/achievements': {
-      id: '/achievements'
-      path: '/achievements'
-      fullPath: '/achievements'
-      preLoaderRoute: typeof AchievementsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,7 +70,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AchievementsRoute: AchievementsRoute,
   AnnouncementsRoute: AnnouncementsRoute,
 }
 export const routeTree = rootRouteImport
