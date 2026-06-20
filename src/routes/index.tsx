@@ -165,8 +165,15 @@ function Hero() {
         </h1>
 
         <div className="relative mt-12 w-full max-w-5xl">
-          <div className="relative rounded-2xl border border-[#616F39]/30 overflow-hidden">
-            <img src={heroImg} alt="Anonymous traders" width={1920} height={1088} className="w-full h-auto rounded-2xl" />
+          <div className="relative rounded-2xl border border-[#616F39]/30 overflow-hidden bg-black aspect-video">
+            <iframe
+              className="w-full h-full rounded-2xl"
+              src="https://www.youtube.com/embed/dcdmV2Voe_A?modestbranding=1&rel=0"
+              title="TNAT Trading Brotherhood"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
           </div>
         </div>
 
