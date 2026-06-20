@@ -153,10 +153,23 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="home" className="relative flex flex-col items-center pt-20 pb-28 bg-[#000000]">
+    <section id="home" className="relative flex flex-col items-center pt-20 pb-28 bg-[#000000] overflow-hidden">
+      <style>{`
+        @keyframes liquidFloat {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(30px, -30px) scale(1.1); }
+          50% { transform: translate(0, -40px) scale(0.95); }
+          75% { transform: translate(-30px, -20px) scale(1.05); }
+        }
+        .liquid-gradient {
+          animation: liquidFloat 8s ease-in-out infinite;
+        }
+      `}</style>
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-[#3E432E]/40 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#616F39]/20 to-transparent" />
+        <div className="liquid-gradient absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#A7D129]/20 via-[#FF2D2D]/10 to-transparent blur-3xl" />
+        <div className="liquid-gradient absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-[#FF2D2D]/15 via-[#616F39]/10 to-transparent blur-3xl opacity-60" style={{ animationDelay: '-2s' }} />
       </div>
       <div className="relative max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
         <h1 className="text-5xl md:text-8xl font-display uppercase leading-[0.9] tracking-tight text-white">

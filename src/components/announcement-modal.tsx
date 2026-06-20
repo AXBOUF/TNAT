@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, CheckCircle2 } from "lucide-react";
+import tmgmImage from "@/assets/tgmg.jpg";
 
 export function AnnouncementModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,13 @@ export function AnnouncementModal() {
           <span className="h-2 w-2 rounded-full bg-[#A7D129]" />
           New Announcement
         </div>
+
+        {/* Image */}
+        <img
+          src={tmgmImage}
+          alt="TMGM TNAT Partnership"
+          className="mt-4 w-full rounded-xl border border-white/10 object-cover"
+        />
 
         {/* Content */}
         <h3 className="mt-4 text-xl font-bold text-white">
