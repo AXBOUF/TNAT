@@ -10,7 +10,6 @@ import achievement3 from "@/assets/achievement3.png";
 import achievement4 from "@/assets/achievement4.png";
 import achievement5 from "@/assets/achievement5.jpg";
 import achievement6 from "@/assets/achievement6.jpg";
-import achievement7 from "@/assets/achievement7.png";
 import achievement8 from "@/assets/achievement8.png";
 import achievement9 from "@/assets/achievement9.png";
 import { ArrowRight, Check, Circle, Heart, CheckCircle2, Flame, Megaphone, Mail, Gift, Sparkles, Trophy, Zap } from "lucide-react";
@@ -89,7 +88,6 @@ const ACHIEVEMENTS = [
   { id: 4, src: achievement4, alt: "Trading Achievement Certificate 4" },
   { id: 5, src: achievement5, alt: "Trading Achievement Certificate 5" },
   { id: 6, src: achievement6, alt: "Trading Achievement Certificate 6" },
-  { id: 7, src: achievement7, alt: "Trading Achievement Certificate 7" },
   { id: 8, src: achievement8, alt: "Trading Achievement Certificate 8" },
   { id: 9, src: achievement9, alt: "Trading Achievement Certificate 9" },
 ];
