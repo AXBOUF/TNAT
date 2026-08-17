@@ -12,7 +12,7 @@ import achievement5 from "@/assets/achievement5.jpg";
 import achievement6 from "@/assets/achievement6.jpg";
 import achievement8 from "@/assets/achievement8.png";
 import achievement9 from "@/assets/achievement9.png";
-import { ArrowRight, Check, Circle, Heart, CheckCircle2, Flame, Megaphone, Mail, Gift, Sparkles, Trophy, Zap } from "lucide-react";
+import { ArrowRight, Check, Circle, Heart, CheckCircle2, Flame, Megaphone, Mail, Gift, Sparkles, Trophy, Zap, Play } from "lucide-react";
 import { VIDEO_ITEMS } from "@/lib/videos";
 import { useHeaderScroll } from "@/hooks/use-header-scroll";
 import { AnnouncementModal } from "@/components/announcement-modal";
@@ -403,7 +403,7 @@ function Videos() {
               {v.youtube ? (
                 <iframe
                   src={v.youtube}
-                  title={v.title}
+                  title={v.id}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   className="absolute inset-0 h-full w-full bg-black"
@@ -424,12 +424,11 @@ function Videos() {
                   <div className="relative h-full w-full flex flex-col items-center justify-center p-8 text-center">
                     <button
                       type="button"
-                      aria-label={`Play ${v.title}`}
+                      aria-label={`Play ${v.id}`}
                       className="h-16 w-16 rounded-full bg-[#FF2D2D] text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"
                     >
                       <Play className="h-6 w-6 fill-current ml-0.5" />
                     </button>
-                    <div className="mt-5 text-2xl md:text-3xl font-display font-bold tracking-tight">{v.title}</div>
                     <div className="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Video coming soon</div>
                   </div>
                 </>
