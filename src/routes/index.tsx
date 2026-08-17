@@ -202,7 +202,7 @@ function Hero() {
             Choose Your Plan <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="https://form.jotform.com/anonymoustrader9999/the-nepali-anonymous-traders"
+            href="https://whop.com/the-nepali-anonymous-traders/tnat-mentorship-1-1-introduction-call/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-[#616F39] bg-[#3E432E]/60 px-6 py-3 font-semibold text-white hover:bg-[#3E432E] transition-colors"
@@ -269,7 +269,7 @@ function Plans() {
         </div>
         <div className="mt-10 text-center">
           <a
-            href="https://form.jotform.com/anonymoustrader9999/the-nepali-anonymous-traders"
+            href="https://whop.com/the-nepali-anonymous-traders/tnat-mentorship-1-1-introduction-call/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -578,7 +578,7 @@ function Footer() {
               { label: "Instagram", href: "https://www.instagram.com/anonymous_trader9999/" },
               { label: "YouTube", href: "https://www.youtube.com/@AnonymousTrader_Nepali" },
               { label: "TikTok", href: "https://www.tiktok.com/@anonymoustrader_nep" },
-              { label: "Book 1-on-1 Call", href: "https://form.jotform.com/anonymoustrader9999/the-nepali-anonymous-traders" },
+              { label: "Book 1-on-1 Call", href: "https://whop.com/the-nepali-anonymous-traders/tnat-mentorship-1-1-introduction-call/" },
             ]}
           />
         </div>
