@@ -1,7 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-anonymous.jpg";
-import mentee1 from "@/assets/mentee-1.jpg";
-import mentee2 from "@/assets/mentee-2.jpg";
 import announcementBanner from "@/assets/ANNOUNCEMENTBANNER.png";
 import liveSessionImage from "@/assets/livesessions.jpg";
 import achievement1 from "@/assets/achievement1.png";
@@ -12,10 +9,17 @@ import achievement5 from "@/assets/achievement5.jpg";
 import achievement6 from "@/assets/achievement6.jpg";
 import achievement8 from "@/assets/achievement8.png";
 import achievement9 from "@/assets/achievement9.png";
+import achievement10 from "@/assets/achievement1.webp";
+import achievement11 from "@/assets/achievement2.webp";
+import achievement12 from "@/assets/achievement6.webp";
+import achievement13 from "@/assets/achievement3.webp";
+import achievement14 from "@/assets/achievement4.webp";
+import achievement15 from "@/assets/achievement5.webp";
 import { ArrowRight, Check, Circle, Heart, CheckCircle2, Flame, Megaphone, Mail, Gift, Sparkles, Trophy, Zap, Play } from "lucide-react";
 import { VIDEO_ITEMS } from "@/lib/videos";
 import { useHeaderScroll } from "@/hooks/use-header-scroll";
 import { AnnouncementModal } from "@/components/announcement-modal";
+import figmaimg from "../assets/figma_img.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,6 +94,12 @@ const ACHIEVEMENTS = [
   { id: 6, src: achievement6, alt: "Trading Achievement Certificate 6" },
   { id: 8, src: achievement8, alt: "Trading Achievement Certificate 8" },
   { id: 9, src: achievement9, alt: "Trading Achievement Certificate 9" },
+  { id: 10, src: achievement10, alt: "Trading Achievement Certificate 10" },
+  { id: 11, src: achievement11, alt: "Trading Achievement Certificate 11" },
+  { id: 12, src: achievement12, alt: "Trading Achievement Certificate 12" },
+  { id: 13, src: achievement13, alt: "Trading Achievement Certificate 13" },
+  { id: 14, src: achievement14, alt: "Trading Achievement Certificate 14" },
+  { id: 15, src: achievement15, alt: "Trading Achievement Certificate 15" }
 ];
 
 const KPIS: [string, string][] = [
@@ -480,41 +490,16 @@ function Announcements() {
 
 
 function Transparency() {
-  const items = [
-    { t: "Daily Journaling", d: "Detailed notes of market conditions, trade setups, and reasoning behind every decision." },
-    { t: "Data Collection", d: "Consistent tracking of key performance metrics to measure and refine our strategies." },
-    { t: "Track Record", d: "A complete, unfiltered history of our trading performance, updated regularly." },
-  ];
   return (
-    <section className="py-24 border-t border-border bg-surface/30">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
-        <div>
-          <p className="text-xs tracking-[0.3em] uppercase text-primary">Transparency at the core</p>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Because results speak louder than promises.</h2>
-          <p className="mt-6 text-muted-foreground">
-            At TNAT, we believe in showing, not just telling. Every trade, every result, every
-            lesson — it's all recorded and shared openly with our community.
-          </p>
-          <p className="mt-4 text-muted-foreground">
-            You'll see real screenshots and photos straight from our journals and performance
-            logs — no cherry-picking, no hidden numbers.
-          </p>
-        </div>
-        <div className="space-y-4">
-          {items.map((it, i) => (
-            <div key={it.t} className="rounded-xl border border-border bg-card p-6 flex gap-5">
-              <div className="text-3xl font-display font-bold text-primary/60 leading-none">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <div>
-                <h3 className="font-semibold">{it.t}</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{it.d}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+
+      <div className="relative rounded-2xl overflow-hidden mb-8">
+      <img
+        src={figmaimg}
+        alt="Transparency Section Image"
+        className="w-full"
+        loading="lazy" 
+      />
+    </div>
   );
 }
 
