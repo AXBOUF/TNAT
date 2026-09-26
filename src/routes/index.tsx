@@ -491,18 +491,19 @@ function Announcements() {
 
 function Transparency() {
   return (
-
-      <div className="relative rounded-2xl overflow-hidden mb-8">
-      <img
-        src={figmaimg}
-        alt="Transparency Section Image"
-        className="w-full"
-        loading="lazy" 
-      />
-    </div>
+    <section className="py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-2xl">
+          <img
+            src={figmaimg}
+            alt=""
+            className="w-full h-auto block"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
-
 
 function Footer() {
   const socials = [
