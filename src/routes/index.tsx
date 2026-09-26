@@ -491,9 +491,9 @@ function Announcements() {
 
 function Transparency() {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-2xl">
+    <section className="py-24 px-6">
+      <div className="max-w-[76rem] mx-auto">
+        <div className="rounded-2xl overflow-hidden shadow-[0_20px_70px_rgba(0,0,0,0.35)]">
           <img
             src={figmaimg}
             alt=""
@@ -504,7 +504,6 @@ function Transparency() {
     </section>
   );
 }
-
 function Footer() {
   const socials = [
     { label: "TikTok", href: "https://www.tiktok.com/@anonymoustrader_nep" },
