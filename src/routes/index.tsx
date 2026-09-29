@@ -543,17 +543,16 @@ function Footer() {
             title="Community"
             links={[
               { label: "Home", to: "/" },
-              { label: "Plans", href: "/#plans" },
-              { label: "Results", href: "/#results" },
-              { label: "Live Sessions", href: "/#home" },
+              { label: "Plans", href: "#plans" },
+              { label: "Results", href: "#results" }
             ]}
           />
           <FooterCol
             title="Content"
             links={[
-              { label: "Videos", href: "/#videos" },
-              { label: "Announcements", href: "/#announcements" },
-              { label: "Transparency", href: "/#results" },
+              { label: "Videos", href: "#videos" },
+              { label: "Announcements", href: "#announcements" },
+              { label: "Transparency", href: "#results" },
             ]}
           />
           <FooterCol
