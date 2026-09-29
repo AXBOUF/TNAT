@@ -75,7 +75,7 @@ export function AnnouncementModal() {
 
           {/* Credit highlight */}
           <a
-            href="/mentorship-call"
+            href="https://whop.com/the-nepali-anonymous-traders/tnat-mentorship-1-1-introduction-call/"
             className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#A7D129] px-6 py-3.5 text-sm font-bold text-black transition-all hover:bg-[#c0e84a] hover:scale-[1.01]"
           >
             Book My 1:1 Call
