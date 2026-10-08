@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import favicon from "../assets/tnat-favicon.png"
 
 function NotFoundComponent() {
   return (
@@ -86,6 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/EXWtB17PB2Rn5zVeXphzL7EfkLQ2/social-images/social-1779504371111-herobanner.webp" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: favicon},
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

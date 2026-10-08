@@ -20,7 +20,7 @@ export const VIDEO_ITEMS: VideoItem[] = [
     tilt: "-rotate-1",
     float: "animate-[float_7s_ease-in-out_infinite_0.5s]",
     type: "youtube",
-    youtube: "https://www.youtube.com/embed/1YTfIS-Bxow",
+    youtube: "https://www.youtube.com/embed/1W4sXGHVSw0",
   },
   {
     id: "VID 2",
@@ -29,7 +29,7 @@ export const VIDEO_ITEMS: VideoItem[] = [
     tilt: "rotate-2",
     float: "animate-[float_9s_ease-in-out_infinite_0.5s]",
     type: "youtube",
-    youtube: "https://www.youtube.com/embed/H1-urzwhQB4?pp=0gcJCfkLAYcqIYzv",
+    youtube: "https://www.youtube.com/embed/3K15yITzT94",
   },
   {
     id: "VID 3",
@@ -38,7 +38,7 @@ export const VIDEO_ITEMS: VideoItem[] = [
     tilt: "-rotate-2",
     float: "animate-[float_8s_ease-in-out_infinite_1s]",
     type: "youtube",
-    youtube: "https://www.youtube.com/embed/jmZbuoQrLIk",
+    youtube: "https://www.youtube.com/embed/mrr-KOCm5cU",
   },
   {
     id: "VID 4",
@@ -47,7 +47,7 @@ export const VIDEO_ITEMS: VideoItem[] = [
     tilt: "rotate-1",
     float: "animate-[float_10s_ease-in-out_infinite_1.5s]",
     type: "youtube",
-    youtube: "https://www.youtube.com/embed/kkfYEAxhfnI",
+    youtube: "https://www.youtube.com/embed/csf-MDOzm20",
   },
   {
     id: "VID 5",
